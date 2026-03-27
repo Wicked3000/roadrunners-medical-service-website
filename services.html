@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | ROADRUNNERS Medical Consultants</title>
+    <meta name="description" content="Comprehensive medical fitness, psychological fitness, and well-being programs by ROADRUNNERS Medical Consultants.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About Us</a></li>
+                    <li><a href="services.html" class="nav__link active">Services</a></li>
+                    <li><a href="team.html" class="nav__link">Our Team</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="tel:+67579520802" class="header__phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span>+675 79520802</span>
+                </a>
+                <a href="contact.html" class="btn btn--primary btn--sm">Get In Touch</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--has-banner" style="background-image: url('assets/services-banner/services-banner.png');">
+        <div class="container">
+            <div class="page-hero__content fade-up">
+                <span class="page-hero__label">What We Offer</span>
+                <h1 class="page-hero__title">Our Services</h1>
+                <p class="page-hero__subtitle">Comprehensive medical fitness, psychological fitness, and well-being solutions for safety-critical industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDICAL FITNESS -->
+    <section class="section section--light" id="medical-fitness">
+        <div class="container">
+            <div class="section__header reveal-up">
+                <span class="section__label">Section 1</span>
+                <h2 class="section__title">Medical Fitness</h2>
+                <div class="section__divider section__divider--center"></div>
+                <p class="section__subtitle">Ensuring physical readiness for safety-critical roles through rigorous medical assessment.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-up delay-1" id="service-pre-employment">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ED5D2A" stroke-width="1.5">
+                            <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <line x1="20" y1="8" x2="20" y2="14"/>
+                            <line x1="23" y1="11" x2="17" y2="11"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">01</div>
+                    <h3 class="service-card__title">Pre-Employment Medicals</h3>
+                    <p class="service-card__text">To evaluate a prospective driver or heavy machinery operator's physical, sensory and cognitive fitness to safely and effectively perform the tasks of driving and heavy equipment operation.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card reveal-up delay-2" id="service-periodic">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ED5D2A" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">02</div>
+                    <h3 class="service-card__title">Periodic Surveillance</h3>
+                    <p class="service-card__text">To monitor driver health to detect emerging or worsening health risks that may incapacitate vehicle control, alertness, endurance or reaction time, ensuring continued medical fitness, early intervention and compliance with safety standards.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card reveal-up delay-3" id="service-return-to-duty">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ED5D2A" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">03</div>
+                    <h3 class="service-card__title">Return-to-Duty Medicals</h3>
+                    <p class="service-card__text">To evaluate recovery and readiness to safely resume driving or machinery operation, following illness, injury or incapacity, ensuring any physical, sensory or cognitive limitations are identified and managed accordingly.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card reveal-up delay-4" id="service-drug-alcohol">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ED5D2A" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">04</div>
+                    <h3 class="service-card__title">Drug and Alcohol Screening</h3>
+                    <p class="service-card__text">To detect and prevent substance-related impairment that could impair safety-critical performance, ensuring fitness for duty and compliance with occupational health and safety standards.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card reveal-up delay-5" id="service-post-incident">
+                    <div class="service-card__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ED5D2A" stroke-width="1.5">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">05</div>
+                    <h3 class="service-card__title">Post-incident Evaluations</h3>
+                    <p class="service-card__text">To determine whether a health-related condition such as a seizure, sudden cardiac event, medication side effect or acute fatigue, contributed to a workplace incident, and to ensure medical fitness to continue driving and/or operating equipment.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PSYCHOLOGICAL FITNESS -->
+    <section class="section section--white" id="psychological-fitness">
+        <div class="container">
+            <div class="section__header reveal-up">
+                <span class="section__label">Section 2</span>
+                <h2 class="section__title">Psychological Fitness</h2>
+                <div class="section__divider section__divider--center"></div>
+                <p class="section__subtitle">Safeguarding mental readiness and cognitive performance for high-risk operations.</p>
+            </div>
+            <div class="services-grid services-grid--4">
+                <div class="service-card service-card--psych reveal-up delay-1" id="service-cognitive">
+                    <div class="service-card__icon service-card__icon--psych">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#163132" stroke-width="1.5">
+                            <path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/>
+                            <line x1="9" y1="21" x2="15" y2="21"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">01</div>
+                    <h3 class="service-card__title">Cognitive Function Test</h3>
+                    <p class="service-card__text">To assess mental abilities critical for safe driving and equipment operation and to detect cognitive impairments that significantly increase the risk of workplace incidents/accidents.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card service-card--psych reveal-up delay-2" id="service-emotional">
+                    <div class="service-card__icon service-card__icon--psych">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#163132" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">02</div>
+                    <h3 class="service-card__title">Emotional &amp; Psychological Wellbeing</h3>
+                    <p class="service-card__text">To screen for emotional stability, stress tolerance and mental health conditions.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card service-card--psych reveal-up delay-3" id="service-fatigue">
+                    <div class="service-card__icon service-card__icon--psych">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#163132" stroke-width="1.5">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">03</div>
+                    <h3 class="service-card__title">Sleep-related Fatigue Screening</h3>
+                    <p class="service-card__text">To identify drivers and operators at risk of sleep-related fatigue that may impair safe driving and/or heavy equipment operation, increasing the risk of workplace incidents/accidents.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="service-card service-card--psych reveal-up delay-4" id="service-behavioral">
+                    <div class="service-card__icon service-card__icon--psych">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#163132" stroke-width="1.5">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </div>
+                    <div class="service-card__number">04</div>
+                    <h3 class="service-card__title">Behavioral Risk Evaluations</h3>
+                    <p class="service-card__text">To assess behavioural traits â€“ impulsivity, risk-taking, non-compliance and substance-use - key indicators that compromise safe and effective driving performance and equipment operation.</p>
+                    <a href="contact.html" class="service-card__link">
+                        Inquire Now
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WELL-BEING PROGRAMS -->
+    <section class="section section--navy" id="wellbeing">
+        <div class="container">
+            <div class="section__header reveal-up">
+                <span class="section__label section__label--light">Section 3</span>
+                <h2 class="section__title section__title--light">Well-being Programs</h2>
+                <div class="section__divider section__divider--light section__divider--center"></div>
+                <p class="section__subtitle section__subtitle--light">Holistic wellness solutions addressing mind, body, and emotional health.</p>
+            </div>
+            <div class="wellbeing-grid">
+                <div class="wellbeing-card reveal-up delay-1">
+                    <div class="wellbeing-card__icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.2">
+                            <path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/>
+                            <line x1="9" y1="21" x2="15" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="wellbeing-card__title">Mental Well-being</h3>
+                    <p class="wellbeing-card__text">Not all wounds are visible. We are dedicated to healing the unseen by helping employees overcome mental challenges with the help of our mental health experts.</p>
+                    <div class="wellbeing-card__accent"></div>
+                </div>
+
+                <div class="wellbeing-card reveal-up delay-2">
+                    <div class="wellbeing-card__icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.2">
+                            <path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
+                            <line x1="6" y1="1" x2="6" y2="4"/>
+                            <line x1="10" y1="1" x2="10" y2="4"/>
+                            <line x1="14" y1="1" x2="14" y2="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="wellbeing-card__title">Physical Well-being</h3>
+                    <p class="wellbeing-card__text">We are committed to helping employees live life without restrictions by providing access to innovative interventions such as chiropractic care and physiotherapy.</p>
+                    <div class="wellbeing-card__accent"></div>
+                </div>
+
+                <div class="wellbeing-card reveal-up delay-3">
+                    <div class="wellbeing-card__icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.2">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3 class="wellbeing-card__title">Social &amp; Emotional Well-being</h3>
+                    <p class="wellbeing-card__text">Taking care of your social and emotional well-being matters. We strive to empower resilience through employee assistance programs which allows employees to navigate challenging life events when confronted.</p>
+                    <div class="wellbeing-card__accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-section__inner reveal-up">
+                <h2 class="cta-section__title">Need a specific service?</h2>
+                <p class="cta-section__text">Contact us today to discuss your requirements and get a tailored solution.</p>
+                <div class="cta-section__actions">
+                    <a href="contact.html" class="btn btn--white btn--lg">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+                    </a>
+                    <p class="footer__tagline">"Living your Best, Healthy and Happy"</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Services</h4>
+                    <ul>
+                        <li><a href="services.html">Medical Fitness</a></li>
+                        <li><a href="services.html">Psychological Fitness</a></li>
+                        <li><a href="services.html">Well-being Programs</a></li>
+                        <li><a href="services.html">Drug & Alcohol Screening</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact</h4>
+                    <div class="footer__contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>+675 79520802</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>info@roadrunnersmedical.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ROADRUNNERS Medical Consultants. All rights reserved.</p>
+                <div class="footer__compliance">
+                    <span class="compliance-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Health Compliance Certified</span>
+                    <span class="compliance-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ISO Accredited</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
