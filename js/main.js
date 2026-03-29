@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (window.scrollY / height) * 100;
-        
+
         if (progressBar) progressBar.style.width = scrolled + '%';
-        
+
         if (backToTop) {
             if (window.scrollY > 400) {
                 backToTop.classList.add('show');
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = parseInt(entry.target.getAttribute('data-target'));
                 let current = 0;
                 const duration = 2000; // 2 seconds
-                const step = duration / (target / (target > 100 ? 5 : 1)); 
-                
+                const step = duration / (target / (target > 100 ? 5 : 1));
+
                 const updateCount = () => {
                     const increment = target / (duration / 20);
                     if (current < target) {
@@ -137,39 +137,125 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- SUPABASE INITIALIZATION ---
+    // User: Replace these with your actual Supabase credentials
+    const SUPABASE_URL = 'https://uaxumomkfborwamzuvke.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVheHVtb21rZmJvcndhbXp1dmtlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3OTM1NjQsImV4cCI6MjA5MDM2OTU2NH0.QCqrMqWrbvgYPEWdmytDyP0xmTp-4adA6NnTsJnioYk';
+
+    let supabase = null;
+    if (typeof window.supabase !== 'undefined') {
+        supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+
     // --- CONTACT FORM HANDLING ---
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            // Success Animation Logic
+            // UI Feedback
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span><svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="animation: spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity="0.2"/><path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/></svg> Sending...</span>';
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span><svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="animation: spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity="0.2"/><path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/></svg> Processing...</span>';
 
-            setTimeout(() => {
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                // --- SUPABASE ONLY SUBMISSION ---
+                if (!supabase) {
+                    throw new Error('Supabase client was not initialized. Check your credentials.');
+                }
+
+                const { error } = await supabase
+                    .from('inquiries')
+                    .insert([{
+                        name: data.name,
+                        email: data.email,
+                        subject: data.subject,
+                        message: data.message,
+                        created_at: new Date()
+                    }]);
+
+                if (error) {
+                    console.error('Supabase Error:', error);
+                    throw new Error(`[Database Error] ${error.message || JSON.stringify(error)}`);
+                }
+
+                // Success Logic
+                // 1. Reset the form immediately so it's blank for the next time
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+
+                // 2. Hide form and show success message with animation
+                contactForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 contactForm.style.opacity = '0';
                 contactForm.style.transform = 'translateY(-20px)';
-                contactForm.style.transition = 'all 0.4s ease';
-                
+
                 setTimeout(() => {
                     contactForm.style.display = 'none';
-                    formSuccess.style.display = 'flex';
+                    formSuccess.style.display = 'flex'; // Now showing the success message
                     formSuccess.style.flexDirection = 'column';
                     formSuccess.style.alignItems = 'center';
+                    formSuccess.style.textAlign = 'center';
                     formSuccess.style.opacity = '0';
                     formSuccess.style.transform = 'translateY(20px)';
-                    
+
                     setTimeout(() => {
                         formSuccess.style.transition = 'all 0.6s ease';
                         formSuccess.style.opacity = '1';
                         formSuccess.style.transform = 'translateY(0)';
                     }, 50);
+
+                    // 3. Auto-close success message and show blank form after 3 seconds
+                    setTimeout(() => {
+                        // Fade out success
+                        formSuccess.style.opacity = '0';
+                        formSuccess.style.transform = 'translateY(-20px)';
+                        
+                        setTimeout(() => {
+                            formSuccess.style.display = 'none';
+                            // Fade in blank form
+                            contactForm.style.display = 'block';
+                            setTimeout(() => {
+                                contactForm.style.opacity = '1';
+                                contactForm.style.transform = 'translateY(0)';
+                            }, 10);
+                        }, 400);
+                    }, 3500); // 3.5 seconds total visible time
+
                 }, 400);
-            }, 1500);
+
+                // 4. (Manual backup) Button to bring back the blank form
+                const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+                if (sendAnotherBtn) {
+                    sendAnotherBtn.onclick = (e) => {
+                        e.preventDefault();
+                        formSuccess.style.display = 'none';
+                        contactForm.style.display = 'block';
+                        setTimeout(() => {
+                            contactForm.style.opacity = '1';
+                            contactForm.style.transform = 'translateY(0)';
+                        }, 10);
+                    };
+                }
+
+            } catch (err) {
+                console.error('Submission Error:', err);
+
+                let errorMessage = 'Please note: There was an issue processing your request. ';
+                if (err.message) {
+                    errorMessage += '\n\n' + err.message;
+                }
+
+                alert(errorMessage + '\n\nPlease check your internet connection or call us directly.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
         });
 
         // Input focus effects
@@ -200,10 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items for a cleaner accordion feel
             faqItems.forEach(i => i.classList.remove('active'));
-            
+
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');

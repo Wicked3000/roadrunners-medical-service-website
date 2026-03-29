@@ -1414,6 +1414,48 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+/* Utilities */
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+/* Form Success State */
+.form-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid rgba(22,49,50,0.06);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.form-success svg {
+    margin-bottom: 1.5rem;
+    color: var(--orange);
+    background: rgba(237,93,42,0.06);
+    padding: 12px;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.form-success h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+}
+
+.form-success p {
+    color: var(--gray-dark);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 .service-card__link {
     display: inline-flex;
     align-items: center;
