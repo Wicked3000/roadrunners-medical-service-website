@@ -4,19 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | ROADRUNNERS Medical Consultants</title>
+    <link rel="icon" type="image/png" href="assets/logo/campany-logo.png">
     <meta name="description" content="Comprehensive medical fitness, psychological fitness, and well-being programs by ROADRUNNERS Medical Consultants.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="Our Services | ROADRUNNERS Medical Consultants">
+    <meta property="og:description" content="Explore our range of occupational health and fitness-to-drive solutions.">
+    <meta property="og:image" content="assets/logo/campany-logo.png">
+    <meta property="og:url" content="https://roadrunnersmedical.com/services.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Roadrunners Medical Services">
+    <meta name="twitter:description" content="Specialized medical assessments for high-risk industries.">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="index.html" class="header__logo">
-                <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+                <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img" loading="lazy">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav__list">
@@ -273,7 +292,61 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- FAQ SECTION -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="section__header reveal-up">
+                <span class="section__label">FAQ</span>
+                <h2 class="section__title">Common Questions</h2>
+                <div class="section__divider section__divider--center"></div>
+                <p class="section__subtitle">Get quick answers to the most common questions about our medical assessments and consultancy services.</p>
+            </div>
+            
+            <div class="faq-grid reveal-up">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a Fitness-to-Drive assessment take?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, a standard assessment takes between 45 to 60 minutes. This involves a physical examination, vision testing, and a review of your medical history. More complex assessments for heavy machinery may take slightly longer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What do I need to bring to my appointment?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please bring a valid photo ID, your current driving license, any corrective lenses (glasses/contacts) you use for driving, and a list of any current medications or relevant medical records from your GP.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are the results shared directly with my employer?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We only share the final "fitness to work" certification status with your employer, as per privacy regulations. Specific medical details remain confidential unless you provide explicit consent otherwise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide drug and alcohol screening?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive drug and alcohol screening as part of our pre-employment medicals and ongoing corporate health programs, ensuring a safe workplace for all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-section__inner reveal-up">
@@ -292,18 +365,17 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="index.html" class="footer__logo">
-                        <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+                        <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants logo" class="logo-img" loading="lazy">
                     </a>
                     <p class="footer__tagline">"Living your Best, Healthy and Happy"</p>
                     <div class="footer__social">
-                        <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                        <a href="https://facebook.com" class="social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="https://linkedin.com" class="social-link" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__heading">Quick Links</h4>
-                    <ul>
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -312,16 +384,16 @@
                     </ul>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__heading">Services</h4>
-                    <ul>
-                        <li><a href="services.html">Medical Fitness</a></li>
-                        <li><a href="services.html">Psychological Fitness</a></li>
-                        <li><a href="services.html">Well-being Programs</a></li>
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__list">
+                        <li><a href="services.html#medical">Medical Fitness</a></li>
+                        <li><a href="services.html#psychological">Psychological Fitness</a></li>
+                        <li><a href="services.html#wellbeing">Well-being Programs</a></li>
                         <li><a href="services.html">Drug & Alcohol Screening</a></li>
                     </ul>
                 </div>
                 <div class="footer__contact">
-                    <h4 class="footer__heading">Contact</h4>
+                    <h4 class="footer__title">Contact</h4>
                     <div class="footer__contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                         <span>+675 79520802</span>
@@ -334,6 +406,12 @@
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2026 ROADRUNNERS Medical Consultants. All rights reserved.</p>
+
+                <div class="footer__legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+
                 <div class="footer__compliance">
                     <span class="compliance-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Health Compliance Certified</span>
                     <span class="compliance-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ISO Accredited</span>

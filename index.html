@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROADRUNNERS Medical Consultants | Fitness-to-Drive Medical Assessments</title>
+    <link rel="icon" type="image/png" href="assets/logo/campany-logo.png">
     <meta name="description"
         content="ROADRUNNERS Medical Consultants - Specialists in Fitness-to-Drive Medical Assessment of Transport and Heavy Machinery Workforce in Safety-critical Industries.">
     <meta name="keywords"
@@ -16,14 +17,37 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="ROADRUNNERS Medical Consultants | Fitness-to-Drive Assessments">
+    <meta property="og:description"
+        content="Specialists in occupational health and fitness-to-drive medical assessments for safety-critical industries.">
+    <meta property="og:image" content="assets/logo/campany-logo.png">
+    <meta property="og:url" content="https://roadrunnersmedical.com/index.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROADRUNNERS Medical Consultants">
+    <meta name="twitter:description" content="Occupational health excellence for safety-critical workforces.">
+    <meta name="twitter:image" content="assets/logo/campany-logo.png">
 </head>
 
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="index.html" class="header__logo">
-                <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+                <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img"
+                    loading="lazy">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav__list">
@@ -218,16 +242,16 @@
             </div>
             <div class="care-grid">
                 <div class="care-card reveal-up delay-1" data-letter="C">
-                    <div class="care-card__letter">C</div>
+                    <div class="care-card__letter" aria-hidden="true">C</div>
                     <h3 class="care-card__title">Competence, Compliance &amp; Clinical Accuracy</h3>
                     <p class="care-card__text">Every decision we make is clinically sound, compliant, and carefully
                         calculated to protect lives and operations.</p>
                     <div class="care-card__accent"></div>
                 </div>
                 <div class="care-card reveal-up delay-2" data-letter="A">
-                    <div class="care-card__letter">A</div>
+                    <div class="care-card__letter" aria-hidden="true">A</div>
                     <h3 class="care-card__title">Accountability, Accuracy &amp; Assurance</h3>
-                    <p class="care-card__text">We take full ownership of our work â€“ every clearance, every report,
+                    <p class="care-card__text">We take full ownership of our work - every clearance, every report,
                         every risk.</p>
                     <div class="care-card__accent"></div>
                 </div>
@@ -244,6 +268,75 @@
                     <p class="care-card__text">We engage with respect, empower through education, and deliver nothing
                         short of excellence.</p>
                     <div class="care-card__accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="section section--navy reveal-up">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15" data-suffix="+">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500" data-suffix="+">0</span>
+                    <span class="stat-label">Assessments Every Month</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="99" data-suffix="%">0</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24" data-suffix="/7">0</span>
+                    <span class="stat-label">Ongoing Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section section--light reveal-up">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Testimonials</span>
+                <h2 class="section__title">What Our Clients Say</h2>
+                <div class="section__divider section__divider--center"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--green)" opacity="0.2">
+                            <path
+                                d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L17.017 3C18.1216 3 19.017 3.89543 19.017 5V6H20.017C21.1216 6 22.017 6.89543 22.017 8V15C22.017 16.1046 21.1216 17 20.017 17H19.017V18C19.017 19.6569 17.6739 21 16.017 21H14.017ZM2.017 21L2.017 18C2.017 16.8954 2.91243 16 4.017 16H7.017C7.56928 16 8.017 15.5523 8.017 15V9C8.017 8.44772 7.56928 8 7.017 8H4.017C2.91243 8 2.017 7.10457 2.017 6V3L5.017 3C6.12157 3 7.017 3.89543 7.017 5V6H8.017C9.12157 6 10.017 6.89543 10.017 8V15C10.017 16.1046 9.12157 17 8.017 17H7.017V18C7.017 19.6569 5.67386 21 4.017 21H2.017Z" />
+                        </svg>
+                    </div>
+                    <p class="testimonial-card__text">"ROADRUNNERS Medical Consultants have been instrumental in
+                        ensuring our transport workforce meets all safety-critical standards. Their professionalism and
+                        thoroughness are world-class."</p>
+                    <div class="testimonial-card__author">
+                        <strong>Operations Manager</strong>
+                        <span>Major Transport Logistics Co.</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--green)" opacity="0.2">
+                            <path
+                                d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L17.017 3C18.1216 3 19.017 3.89543 19.017 5V6H20.017C21.1216 6 22.017 6.89543 22.017 8V15C22.017 16.1046 21.1216 17 20.017 17H19.017V18C19.017 19.6569 17.6739 21 16.017 21H14.017ZM2.017 21L2.017 18C2.017 16.8954 2.91243 16 4.017 16H7.017C7.56928 16 8.017 15.5523 8.017 15V9C8.017 8.44772 7.56928 8 7.017 8H4.017C2.91243 8 2.017 7.10457 2.017 6V3L5.017 3C6.12157 3 7.017 3.89543 7.017 5V6H8.017C9.12157 6 10.017 6.89543 10.017 8V15C10.017 16.1046 9.12157 17 8.017 17H7.017V18C7.017 19.6569 5.67386 21 4.017 21H2.017Z" />
+                        </svg>
+                    </div>
+                    <p class="testimonial-card__text">"The psychological fitness assessments provided by the Roadrunners
+                        team gave us invaluable insights into our team's mental well-being and readiness for high-stakes
+                        environments."</p>
+                    <div class="testimonial-card__author">
+                        <strong>HR Director</strong>
+                        <span>Industrial Safety Solutions</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,32 +380,29 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="index.html" class="footer__logo">
-                        <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants" class="logo-img">
+                        <img src="assets/logo/campany-logo.png" alt="ROADRUNNERS Medical Consultants logo"
+                            class="logo-img" loading="lazy">
                     </a>
                     <p class="footer__tagline">"Living your Best, Healthy and Happy"</p>
                     <div class="footer__social">
-                        <a href="#" class="social-link" aria-label="Facebook">
+                        <a href="https://facebook.com" class="social-link" aria-label="Follow us on Facebook"
+                            target="_blank" rel="noopener">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
                             </svg>
                         </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
+                        <a href="https://linkedin.com" class="social-link" aria-label="Follow us on LinkedIn"
+                            target="_blank" rel="noopener">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
                             </svg>
                         </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                            </svg>
-                        </a>
                     </div>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__heading">Quick Links</h4>
-                    <ul>
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -321,16 +411,16 @@
                     </ul>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__heading">Services</h4>
-                    <ul>
-                        <li><a href="services.html">Medical Fitness</a></li>
-                        <li><a href="services.html">Psychological Fitness</a></li>
-                        <li><a href="services.html">Well-being Programs</a></li>
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__list">
+                        <li><a href="services.html#medical">Medical Fitness</a></li>
+                        <li><a href="services.html#psychological">Psychological Fitness</a></li>
+                        <li><a href="services.html#wellbeing">Well-being Programs</a></li>
                         <li><a href="services.html">Drug & Alcohol Screening</a></li>
                     </ul>
                 </div>
                 <div class="footer__contact">
-                    <h4 class="footer__heading">Contact</h4>
+                    <h4 class="footer__title">Contact</h4>
                     <div class="footer__contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -351,6 +441,12 @@
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2026 ROADRUNNERS Medical Consultants. All rights reserved.</p>
+
+                <div class="footer__legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+
                 <div class="footer__compliance">
                     <span class="compliance-badge">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
