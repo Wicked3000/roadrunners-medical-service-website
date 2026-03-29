@@ -1173,19 +1173,65 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleX(1);
 }
 
-/* Dark variant */
+/* Dark variant color-coding */
+.care-card--dark[data-letter="C"] { --card-theme: #00d2ff; } /* Competence - Cyan */
+.care-card--dark[data-letter="A"] { --card-theme: #ed5d2a; } /* Accountability - Orange (Brand) */
+.care-card--dark[data-letter="R"] { --card-theme: #059669; } /* Resilience - Green */
+.care-card--dark[data-letter="E"] { --card-theme: #6366f1; } /* Excellence - Indigo/Royal */
+
 .care-card--dark {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 1;
 }
 
-.care-card--dark .care-card__letter { color: rgba(255,255,255,0.08); }
-.care-card--dark:hover .care-card__letter { color: rgba(237,93,42,0.25); }
-.care-card--dark .care-card__title { color: var(--white); }
-.care-card--dark .care-card__text  { color: rgba(255,255,255,0.7); }
+.care-card--dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--card-theme), transparent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+    z-index: -1;
+}
+
+.care-card--dark:hover::before {
+    opacity: 0.12;
+}
+
+.care-card--dark .care-card__letter { 
+    color: var(--card-theme); 
+    opacity: 0.08;
+    transition: all 0.4s var(--ease);
+}
+
+.care-card--dark:hover .care-card__letter { 
+    opacity: 0.25; 
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.care-card--dark .care-card__title { 
+    color: var(--white);
+    transition: color 0.4s var(--ease);
+}
+
+.care-card--dark:hover .care-card__title {
+    color: var(--card-theme);
+}
+
+.care-card--dark .care-card__text { 
+    color: rgba(255,255,255,0.6); 
+}
+
+.care-card--dark .care-card__accent {
+    background: var(--card-theme);
+}
+
 .care-card--dark:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    border-color: var(--card-theme);
+    box-shadow: 0 10px 30px -10px var(--card-theme);
 }
 
 /* ===========================================
