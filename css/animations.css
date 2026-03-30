@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    ANIMATIONS & SCROLL REVEAL
    ============================================ */
 
@@ -30,6 +30,12 @@
 .reveal-right.revealed {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+@media (max-width: 768px) {
+    .reveal-left, .reveal-right { transform: translateY(20px); }
+    .fade-up { animation-duration: 0.5s; transform: translateY(15px); }
+    .reveal-up { transform: translateY(20px); }
 }
 
 .reveal-up.delay-1 { transition-delay: 0.1s; }
