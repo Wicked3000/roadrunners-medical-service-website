@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
+        if (!header) return;
         const currentScroll = window.scrollY;
         if (currentScroll > 50) {
             header.classList.add('header--scrolled');
         } else {
             header.classList.remove('header--scrolled');
         }
-        lastScroll = currentScroll;
     }, { passive: true });
 
     // --- MOBILE NAVIGATION ---
@@ -284,30 +284,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        }
+    });
 
-            // Close all other items for a cleaner accordion feel
-            faqItems.forEach(i => i.classList.remove('active'));
-
-            // Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
+    // --- WELLBEING ACCORDION ---
+    document.querySelectorAll('.wellbeing-item').forEach(item => {
+        const trigger = item.querySelector('.wellbeing-trigger');
+        if (trigger) {
+            trigger.onclick = () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.wellbeing-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            };
+        }
     });
 
     // --- HERO SLIDER ---
     const heroSlider = document.getElementById('heroSlider');
-    const slides = heroSlider ? heroSlider.querySelectorAll('.hero__slide') : [];
-    let currentSlide = 0;
+    if (heroSlider) {
+        const slides = heroSlider.querySelectorAll('.hero__slide');
+        let currentSlide = 0;
 
-    if (slides.length > 1) {
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 6000); // 6 seconds per slide
+        if (slides.length > 1) {
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        }
     }
 });
 

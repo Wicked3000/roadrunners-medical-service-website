@@ -2525,3 +2525,114 @@ h3 { font-size: clamp(1.4rem, 4vw, 2rem); text-align: inherit; }
     .page-hero__title { font-size: 2.3rem !important; }
     .hero__subtitle { font-size: 1rem !important; }
 }
+
+/* --- WELLBEING FRAMEWORK --- */
+.wellbeing-framework {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wellbeing-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.3s var(--ease);
+}
+
+.wellbeing-item:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.wellbeing-item.active {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(237,93,42,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.wellbeing-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s var(--ease);
+}
+
+.wellbeing-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.wellbeing-icon {
+    color: var(--green);
+    transition: transform 0.3s var(--ease);
+}
+
+.wellbeing-arrow {
+    transition: transform 0.4s var(--ease);
+    opacity: 0.5;
+}
+
+.wellbeing-item.active .wellbeing-arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+    color: var(--green);
+}
+
+.wellbeing-item.active .wellbeing-icon {
+    transform: scale(1.1);
+}
+
+.wellbeing-item.active .wellbeing-content {
+    display: block !important;
+    max-height: 500px !important;
+    padding: 0 20px 20px 52px !important;
+    opacity: 1 !important;
+}
+
+.wellbeing-content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s var(--ease);
+    padding: 0 20px;
+    opacity: 0;
+}
+
+.wellbeing-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(255,255,255,0.85);
+}
+
+.wellbeing-trigger {
+    pointer-events: auto !important;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+}
+
+.wellbeing-item.active {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: var(--green) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.wellbeing-item.active .wellbeing-arrow {
+    transform: rotate(180deg);
+    color: var(--green);
+}
+
