@@ -833,7 +833,8 @@ h3 { font-size: clamp(1.4rem, 4vw, 2rem); text-align: inherit; }
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55); /* Darker backdrop for legibility */
+    /* Sophisticated dark-to-light gradient overlay for maximum readability */
+    background: linear-gradient(180deg, rgba(22, 49, 50, 0.72) 0%, rgba(22, 49, 50, 0.45) 50%, rgba(22, 49, 50, 0.8) 100%);
     z-index: 1;
 }
 
@@ -846,6 +847,7 @@ h3 { font-size: clamp(1.4rem, 4vw, 2rem); text-align: inherit; }
 .page-hero--about { background-image: url('../assets/about-banner/about-banner.png'); }
 .page-hero--services { background-image: url('../assets/services-banner/services-banner.png'); }
 .page-hero--team { background-image: url('../assets/ourteam-banner/ourteam-banner.png'); }
+.page-hero--contact { background-image: url('../assets/contact-banner/content-banner-img.png'); }
 
 .hero-slide--1 { background-image: url('../assets/hero-slider/hero-banner-01.png'); }
 .hero-slide--2 { background-image: url('../assets/hero-slider/hero-banner-02.png'); }
@@ -1558,6 +1560,56 @@ h3 { font-size: clamp(1.4rem, 4vw, 2rem); text-align: inherit; }
 .about-intro__image {
     position: relative;
     max-width: 500px;
+    z-index: 1;
+}
+
+/* Premium decorative background elements */
+.about-intro__image::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 160px;
+    height: 160px;
+    background: var(--grad-green);
+    opacity: 0.15;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: -1;
+    animation: blobify 15s linear infinite;
+    filter: blur(20px);
+}
+
+.about-intro__image::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(237, 93, 42, 0.2);
+    border-radius: var(--radius-lg);
+    z-index: -1;
+    transition: all 0.5s var(--ease);
+}
+
+.about-intro__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s var(--ease);
+}
+
+.about-intro__image:hover .about-intro__img {
+    transform: translate(10px, -10px);
+}
+
+.about-intro__image:hover::after {
+    transform: translate(-10px, 10px);
+    border-color: rgba(237, 93, 42, 0.4);
 }
 
 .placeholder-image {
